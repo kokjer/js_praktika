@@ -1,4 +1,16 @@
-import _ from "lodash";
+function checkAge(age) {
+  if (age >= 18) {
+    return true;
+  } else {
+    return confirm('А родители разрешили?');
+  }
+}
 
-console.log('Hello');
-console.log(_.last(['one', 'two']));
+let age = prompt('Сколько вам лет?', 18);
+
+if ( checkAge(age) ) {
+  alert( 'Доступ получен' );
+} else {
+  alert( 'Доступ закрыт' );
+}
+
